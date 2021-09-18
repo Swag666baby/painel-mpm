@@ -3,21 +3,21 @@
 
 Um painel simples com consultas de **IP**, **CNPJ**, **CEP** e **PLACA**
 
-##Início🌐
+## Início🌐
 ```shell script
 apt update && apt upgrade -y
 pkg i python git
 pip install requests
 ```
 
-##Instalação e acesso📲
+## Instalação e acesso📲
 ```shell script
 git clone https://github.com/Swag666baby/Painel-mpm
 cd Painel-mpm
 python3 main.py
 ```
 
-##Lindos que contribuiram para o painel❤️
+## Lindos que contribuiram para o painel❤️
 
 [Spyware](https://github.com/Spyware0)
 
