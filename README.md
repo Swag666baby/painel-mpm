@@ -14,3 +14,7 @@ Painel simples com consulta de cep,CNPJ,placa e ip
 
 # python3 main.py
 
+# CREDITO AOS LINFOS QUE ME AJUDARAM EM 60%
+
+# Spyware0
+# mrdiniz88
