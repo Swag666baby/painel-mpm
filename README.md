@@ -8,7 +8,7 @@ Painel simples com consulta de cep,CNPJ,placa e ip
 
 # apt install git
 
-# git clone https://github.com/Swag666baby/PAINEL-MILICIA-PIKA-DE-MEL
+# git clone https://github.com/Swag666baby/milicia-pika-de-mel
 
 # cd MILICIA-PIKA-DE-MEL
 
