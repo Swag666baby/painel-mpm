@@ -2,12 +2,10 @@
 cl = '\033[0m'
 az = '\033[1;94m'
 cia = '\033[1;36m'
-cz = '\033[1;37m'
 
 import requests
 import os
 from sys import argv, executable
-import base64
 
 
 def restart():
@@ -26,10 +24,9 @@ def opcoes():
     print('{}MILICIA PIKA DE MEL\033[0m'.format(cia))
     print(' ')
     print('\033[4;37mCRIADO POR: SWAG,MRDINIZ,SPYWARE,INTACTOX\033[0;0m')
-    print('\033[4;37mGITHUB: Swag666baby // Spyware0 // mrdiniz88\033[m')
-    print('ZAP: 556295598220')
+    print('GITHUB: Swag666baby // Spyware0 // mrdiniz88')
     print(' ')
-    print('ESCOLHA UM NÚMERO: ')
+    print('ESCOLHA UM NÚMERO:')
     print(' ')
     print('{}[{}1{}]{} CONSULTA DE CEP'.format(cl,cia,cl,cia))
     print('{}[{}2{}]{} CONSULTA DE IP'.format(cl,cia,cl,cia))
@@ -61,7 +58,7 @@ def Ip():
     r = requests.get(f'https://ipwhois.app/json/{ip}')
     data = r.json()
     clear()
-    print(f'{cz}IP: {data["ip"]}')
+    print(f'IP: {data["ip"]}')
     print(f'CONTINENTE: {data ["continent"]}')
     print(f'PAIS: {data ["country"]}')
     print(f'CAPITAL: {data ["country_capital"]}')
@@ -69,7 +66,7 @@ def Ip():
     print(f'ESTADO: {data ["region"]}')
     print(f'LATITUDE: {data ["latitude"]}')
     print(f'LONGITUDEDE: {data ["longitude"]}')
-    print(f'PROVEDOR: {data ["asn"]}{cl}')
+    print(f'PROVEDOR: {data ["asn"]}')
     Enter()
 
 
@@ -80,16 +77,16 @@ def Cep():
     a = requests.get(f'https://viacep.com.br/ws/{cep}/json')
     cp = a.json()
     clear()
-    print(f'{cz}CEP: {cp["cep"]}')
-    print(f'LOGRADOURO: {cp["logradouro"]}')
-    print(f'COMPLEMENTO: {cp["complemento"]}')
-    print(f'BAIRRO: {cp["bairro"]}')
-    print(f'LOCALIDADE: {cp["localidade"]}')
-    print(f'UF: {cp["uf"]}')
-    print(f'IBGE: {cp["ibge"]}')
-    print(f'GIA: {cp["gia"]}')
-    print(f'DDD: {cp["ddd"]}')
-    print(f'SIAF: {cp["siafi"]}{cl}')
+    print(f'cep: {cp["cep"]}')
+    print(f'logradouro: {cp["logradouro"]}')
+    print(f'complemento: {cp["complemento"]}')
+    print(f'bairro: {cp["bairro"]}')
+    print(f'localidade: {cp["localidade"]}')
+    print(f'uf: {cp["uf"]}')
+    print(f'ibgd: {cp["ibge"]}')
+    print(f'gia: {cp["gia"]}')
+    print(f'ddd: {cp["ddd"]}')
+    print(f'siafi: {cp["siafi"]}')
     Enter()
 
 def Cnpj():
@@ -102,21 +99,12 @@ def Cnpj():
     
     clear()
 	
-    print(f'{cz}NOME: {pj["nome"]}')
+    print(f'NOME: {pj["nome"]}')
     print(f'COMPLEMENTO : {pj["complemento"]}')
     print(f'ATUALIZACAO CADASTRAL: {pj["data_situacao"]}')
     print(f'TIPO: {pj["tipo"]}')
     print(f'TELEFONE: {pj["telefone"]}')
     print(f'EMAIL: {pj["email"]}')
-    print(f'SITUACAO: {pj["situacao"]}')
-    print(f'BAIRRO: {pj["bairro"]}')
-    print(f'NUMERO: {pj["numero"]}')
-    print(f'CEP: {pj["cep"]}')
-    print(f'MUNICIPIO: {pj["municipio"]}')
-    print(f'DATA DE ABERTURA: {pj["abertura"]}')
-    print(f'CNPJ: {pj["cnpj"]}')
-    print(f'CAPITAL SOCIAL: {pj["capital_social"]}{cl}')
-    Enter()
 
 def placa():
     clear()
@@ -129,9 +117,8 @@ def placa():
     clear()
 
     
-    print(f'\033[1;37mANO: {pj["ano"]}')
+    print(f'ANO: {pj["ano"]}')
     print(f'ANO MODELO: {pj["anoModelo"]}')
-    print(f'COR: {pj["cor"]}')
     print(f'CHASSI: {pj["chassi"]}')
     print(f'CODIGO DE RETORNO: {pj["codigoRetorno"]}')
     print(f'CODIGO DE SITUACAO: {pj["codigoSituacao"]}')
@@ -143,7 +130,7 @@ def placa():
     print(f'PLACA: {pj["placa"]}')
     print(f'SITUACAO: {pj["situacao"]}')
     print(f'MUNICIPIO: {pj["municipio"]}')
-    print(f'RETORNO: {pj["mensagemRetorno"]}\033[1;0m')
+    print(f'RETORNO: {pj["mensagemRetorno"]}')
     Enter()
 
 clear()
