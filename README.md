@@ -16,7 +16,7 @@ pip install requests
 ## Instalação e acesso📲
 ```shell script
 git clone https://github.com/Swag666baby/Painel-mpm
-cd Painel-mpm
+cd painel-mpm
 python3 main.py
 ```
 
