@@ -1,8 +1,9 @@
 #cia = '\033[1;36m'
+#gabriel é homossexual
 cl = '\033[0m'
 az = '\033[1;94m'
 cia = '\033[1;36m'
-cz = '\033[1;37m'
+ba = '\033[1;37m'
 
 import requests
 import os
@@ -23,19 +24,24 @@ def clear():
     
 
 def opcoes():
-    print('{}MILICIA PIKA DE MEL\033[0m'.format(cia))
+    
+    
+    print(f'   {ba}━━━━━━━━❮◆❯━━━━━━━━━━{ba}')
+    print('    {}MILICIA PIKA DE MEL\033[0m'.format(cia))
+    print(f'{ba}   ━━━━━━━━❮◆❯━━━━━━━━━━{ba}')
+    print('\033[1;37mCRIADO POR: SWAG,MRDINIZ,SPYWARE,INSTATOS\033[0;0m')
+    print('')
+    print('\033[1;37mGITHUB: Swag666baby // Spyware0 // mrdiniz88\033[m')
+    print(f'{ba}ZAP: 556295598220')
     print(' ')
-    print('\033[4;37mCRIADO POR: SWAG,MRDINIZ,SPYWARE,INTACTOX\033[0;0m')
-    print('\033[4;37mGITHUB: Swag666baby // Spyware0 // mrdiniz88\033[m')
-    print('ZAP: 556295598220')
+    print(f'{ba}ESCOLHA UM NÚMERO: ')
     print(' ')
-    print('ESCOLHA UM NÚMERO: ')
-    print(' ')
-    print('{}[{}1{}]{} CONSULTA DE CEP'.format(cl,cia,cl,cia))
-    print('{}[{}2{}]{} CONSULTA DE IP'.format(cl,cia,cl,cia))
-    print('{}[{}3{}]{} CONSULTA DE CNPJ'.format(cl,cia,cl,cia))
-    print('{}[{}4{}]{} CONSULTA DE PLACA'.format(cl,cia,cl,cia))
-    opc = input('>>>  {}'.format(cl))
+    print('{}━❮{}1{}❯━{} CONSULTA DE CEP'.format(ba,cia,ba,cia))
+    print('{}━❮{}2{}❯━{} CONSULTA DE IP'.format(ba,cia,ba,cia))
+    print('{}━❮{}3{}❯━{} CONSULTA DE CNPJ'.format(ba,cia,ba,cia))
+    print('{}━❮{}4{}❯━{} CONSULTA DE PLACA'.format(ba,cia,ba,cia))
+    
+    opc = input('➣➣➣    {}'.format(cl))
 
     if opc == '1':
     	Cep()
@@ -61,15 +67,15 @@ def Ip():
     r = requests.get(f'https://ipwhois.app/json/{ip}')
     data = r.json()
     clear()
-    print(f'{cz}IP: {data["ip"]}')
-    print(f'CONTINENTE: {data ["continent"]}')
-    print(f'PAIS: {data ["country"]}')
-    print(f'CAPITAL: {data ["country_capital"]}')
-    print(f'CODIGO DE AREA: {data ["country_phone"]}')
-    print(f'ESTADO: {data ["region"]}')
-    print(f'LATITUDE: {data ["latitude"]}')
-    print(f'LONGITUDEDE: {data ["longitude"]}')
-    print(f'PROVEDOR: {data ["asn"]}{cl}')
+    print(f'{cia}IP{ba}: {data["ip"]}')
+    print(f'{cia}CONTINENTE{ba}: {data ["continent"]}')
+    print(f'{cia}PAIS{ba}: {data ["country"]}')
+    print(f'{cia}CAPITAL{ba}: {data ["country_capital"]}')
+    print(f'{cia}CODIGO DE AREA{ba}: {data ["country_phone"]}')
+    print(f'{cia}ESTADO{ba}: {data ["region"]}')
+    print(f'{cia}LATITUDE{ba}: {data ["latitude"]}')
+    print(f'{cia}LONGITUDEDE{ba}: {data ["longitude"]}')
+    print(f'{cia}PROVEDOR{ba}: {data ["asn"]}')
     Enter()
 
 
@@ -80,16 +86,16 @@ def Cep():
     a = requests.get(f'https://viacep.com.br/ws/{cep}/json')
     cp = a.json()
     clear()
-    print(f'{cz}CEP: {cp["cep"]}')
-    print(f'LOGRADOURO: {cp["logradouro"]}')
-    print(f'COMPLEMENTO: {cp["complemento"]}')
-    print(f'BAIRRO: {cp["bairro"]}')
-    print(f'LOCALIDADE: {cp["localidade"]}')
-    print(f'UF: {cp["uf"]}')
-    print(f'IBGE: {cp["ibge"]}')
-    print(f'GIA: {cp["gia"]}')
-    print(f'DDD: {cp["ddd"]}')
-    print(f'SIAF: {cp["siafi"]}{cl}')
+    print(f'{cia}CEP{ba}: {cp["cep"]}')
+    print(f'{cia}LOGRADOURO{ba}: {cp["logradouro"]}')
+    print(f'{cia}COMPLEMENTO{ba}: {cp["complemento"]}')
+    print(f'{cia}BAIRRO{ba}: {cp["bairro"]}')
+    print(f'{cia}LOCALIDADE{ba}: {cp["localidade"]}')
+    print(f'{cia}UF{ba}: {cp["uf"]}')
+    print(f'{cia}IBGE{ba}: {cp["ibge"]}')
+    print(f'{cia}GIA{ba}: {cp["gia"]}')
+    print(f'{cia}DDD{ba}: {cp["ddd"]}')
+    print(f'{cia}SIAF{ba}: {cp["siafi"]}')
     Enter()
 
 def Cnpj():
@@ -102,20 +108,20 @@ def Cnpj():
     
     clear()
 	
-    print(f'{cz}NOME: {pj["nome"]}')
-    print(f'COMPLEMENTO : {pj["complemento"]}')
-    print(f'ATUALIZACAO CADASTRAL: {pj["data_situacao"]}')
-    print(f'TIPO: {pj["tipo"]}')
-    print(f'TELEFONE: {pj["telefone"]}')
-    print(f'EMAIL: {pj["email"]}')
-    print(f'SITUACAO: {pj["situacao"]}')
-    print(f'BAIRRO: {pj["bairro"]}')
-    print(f'NUMERO: {pj["numero"]}')
-    print(f'CEP: {pj["cep"]}')
-    print(f'MUNICIPIO: {pj["municipio"]}')
-    print(f'DATA DE ABERTURA: {pj["abertura"]}')
-    print(f'CNPJ: {pj["cnpj"]}')
-    print(f'CAPITAL SOCIAL: {pj["capital_social"]}{cl}')
+    print(f'{cia}NOME{ba}: {pj["nome"]}')
+    print(f'{cia}COMPLEMENTO{ba} : {pj["complemento"]}')
+    print(f'{cia}ATUALIZACAO CADASTRAL{ba}: {pj["data_situacao"]}')
+    print(f'{cia}TIPO{ba}: {pj["tipo"]}')
+    print(f'{cia}TELEFONE{ba}: {pj["telefone"]}')
+    print(f'{cia}EMAIL{ba}: {pj["email"]}')
+    print(f'{cia}SITUACAO{ba}: {pj["situacao"]}')
+    print(f'{cia}BAIRRO{ba}: {pj["bairro"]}')
+    print(f'{cia}NUMERO{ba}: {pj["numero"]}')
+    print(f'{cia}CEP{ba}: {pj["cep"]}')
+    print(f'{cia}MUNICIPIO{ba}: {pj["municipio"]}')
+    print(f'{cia}DATA DE ABERTURA{ba}: {pj["abertura"]}')
+    print(f'{cia}CNPJ{ba}: {pj["cnpj"]}')
+    print(f'{cia}CAPITAL SOCIAL{ba}: {pj["capital_social"]}')
     Enter()
 
 def placa():
@@ -129,22 +135,23 @@ def placa():
     clear()
 
     
-    print(f'\033[1;37mANO: {pj["ano"]}')
-    print(f'ANO MODELO: {pj["anoModelo"]}')
-    print(f'COR: {pj["cor"]}')
-    print(f'CHASSI: {pj["chassi"]}')
-    print(f'CODIGO DE RETORNO: {pj["codigoRetorno"]}')
-    print(f'CODIGO DE SITUACAO: {pj["codigoSituacao"]}')
-    print(f'DATA: {pj["data"]}')
-    print(f'DATA FURTO: {pj["dataAtualizacaoRouboFurto"]}')
-    print(f'MARCA: {pj["marca"]}')
-    print(f'MODELO: {pj["modelo"]}')
-    print(f'LOCALIDADE: {pj["uf"]}')
-    print(f'PLACA: {pj["placa"]}')
-    print(f'SITUACAO: {pj["situacao"]}')
-    print(f'MUNICIPIO: {pj["municipio"]}')
-    print(f'RETORNO: {pj["mensagemRetorno"]}\033[1;0m')
+    print(f'{cia}ANO{ba}: {pj["ano"]}')
+    print(f'{cia}ANO MODELO{ba}: {pj["anoModelo"]}')
+    print(f'{cia}COR{cl}: {pj["cor"]}')
+    print(f'{cia}CHASSI{ba}: {pj["chassi"]}')
+    print(f'{cia}CODIGO DE RETORNO{ba}: {pj["codigoRetorno"]}')
+    print(f'{cia}CODIGO DE SITUACAO{cl}: {pj["codigoSituacao"]}')
+    print(f'{cia}DATA{ba}: {pj["data"]}')
+    print(f'{cia}DATA FURTO{ba}: {pj["dataAtualizacaoRouboFurto"]}')
+    print(f'{cia}MARCA{ba}: {pj["marca"]}')
+    print(f'{cia}MODELO{ba}: {pj["modelo"]}')
+    print(f'{cia}LOCALIDADE{ba}: {pj["uf"]}')
+    print(f'{cia}PLACA{ba}: {pj["placa"]}')
+    print(f'{cia}SITUACAO{ba}: {pj["situacao"]}')
+    print(f'{cia}MUNICIPIO{ba}: {pj["municipio"]}')
+    print(f'{cia}RETORNO{ba}: {pj["mensagemRetorno"]}')
     Enter()
+
 
 clear()
 
