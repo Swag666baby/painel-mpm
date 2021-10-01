@@ -5,6 +5,7 @@ az = '\033[1;94m'
 cia = '\033[1;36m'
 ba = '\033[1;37m'
 ro = '\033[1;35m'
+v = '\033[1;31m'
 
 import requests
 import os
@@ -40,7 +41,8 @@ def opcoes():
   {ba}━❮{cia}3{ba}❯━{cia} CONSULTA DE CNPJ
   {ba}━❮{cia}4{ba}❯━{cia} CONSULTA DE PLACA
   {ba}━❮{cia}5{ba}❯━{cia} CONSULTA DE TELEFONE
-  {ba}━❮{cia}6{ba}❯━{cia} CONSULTA DE CPF''')
+  {ba}━❮{cia}6{ba}❯━{cia} CONSULTA DE CPF
+  {ba}━❮{cia}7{ba}❯━{cia} CONSULTA DE NOME''')
     
     opc = input('   ➣➣➣    {}'.format(cl))
 
@@ -61,6 +63,9 @@ def opcoes():
     	
     elif opc == '6':
     	cpf()
+    	
+    elif opc == '7':
+    	nome()
     	
     else:
         restart()
@@ -162,8 +167,14 @@ def telefone():
 	print(f'{v}OPÇÃO DESABILITADA{cl}')
 	
 def cpf():
+	clear()
 	print(f'{v}OPÇÃO DESABILITADA{cl}')
-
+	Enter()
+	
+def nome():
+	clear()
+	print(f'{v}OPÇÃO DESABILITADA{cl}')
+	Enter()
 
 clear()
 
