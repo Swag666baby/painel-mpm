@@ -6,7 +6,7 @@
 
 # ***Painel mpm***
 
-Um painel simples com consultas de **IP**, **CNPJ**, **CEP** e **PLACA**
+Um painel simples com consultas de **IP**, **CNPJ**, **CEP**, **PLACA**, **TELEFONE**, **CPF** e **NOME**
 
 ## Início🌐
 ```shell script
