@@ -19,7 +19,7 @@ pip install requests
 ```shell script
 git clone https://github.com/Swag666baby/Painel-mpm
 cd painel-mpm
-python3 main.py
+python3 painel-mpm.py
 ```
 
 ## Lindos que contribuiram para o painel❤️
