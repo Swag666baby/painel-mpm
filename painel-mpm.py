@@ -127,33 +127,17 @@ def Cnpj():
 def placa():
     clear()
     placa = input(f'{cia}DIGITE A PLACA{ba}: ')
-	
     u = requests.get(f'https://apicarros.com/v1/consulta/{placa}/json', verify=False)
-	
     pj = u.json()
-    
     clear()
-
-    print(f'{cia}ANO{ba}: {pj["ano"]}')
-    print(f'{cia}ANO MODELO{ba}: {pj["anoModelo"]}')
-    print(f'{cia}COR{ba}: {pj["cor"]}')
-    print(f'{cia}CHASSI{ba}: {pj["chassi"]}')
-    print(f'{cia}CODIGO DE RETORNO{ba}: {pj["codigoRetorno"]}')
-    print(f'{cia}CODIGO DE SITUACAO{ba}: {pj["codigoSituacao"]}')
-    print(f'{cia}DATA{ba}: {pj["data"]}')
-    print(f'{cia}DATA FURTO{ba}: {pj["dataAtualizacaoRouboFurto"]}')
-    print(f'{cia}MARCA{ba}: {pj["marca"]}')
-    print(f'{cia}MODELO{ba}: {pj["modelo"]}')
-    print(f'{cia}LOCALIDADE{ba}: {pj["uf"]}')
-    print(f'{cia}PLACA{ba}: {pj["placa"]}')
-    print(f'{cia}SITUACAO{ba}: {pj["situacao"]}')
-    print(f'{cia}MUNICIPIO{ba}: {pj["municipio"]}')
-    print(f'{cia}RETORNO{ba}: {pj["mensagemRetorno"]}')
-    Enter()
+    for i in pj:
+    	print(f'{cia}{i}{ba}: {pj[i]}')
+    Enter() 
     
 def telefone():
 	clear()
 	print(f'{v}OPÇÃO DESABILITADA{ba}')
+	clear()
 	Enter()
 	
 def cpf():
@@ -163,7 +147,23 @@ def cpf():
 	
 def nome():
 	clear()
-	print(f'{v}OPÇÃO DESABILITADA{ba}')
+	nome = input(f'{cia}DIGITE O NOME{ba}: ')
+	nom = requests.get(f'http://ghostcenter.xyz/api/nome/{nome}')
+	bb = nom.json()
+	for i in bb:
+		if bb[i] != '':
+			if type(bb[i]) == dict:
+				
+				for c in [i]:
+					print(f'{cia}{c}{ba}: {bb[i][c]}')
+			elif type(bb[i]) == list:
+				
+				for ite in bb[i]:
+					for ij in ite:
+						print(f'{cia}{ij}{ba}: {ite[ij]}')
+			elif type(bb[i]) == str or int or float or bool:
+				print(f'{cia}{i}{ba}: {bb[i]}')
+	
 	Enter()
 
 clear()
