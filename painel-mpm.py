@@ -11,7 +11,7 @@ def restart():
     os.execl(executable, executable, *argv)
 
 def Enter():
-    input("enter para continuar")
+    input("Pressione ENTER para continuar")
     
     restart()
     
@@ -26,9 +26,24 @@ def opcoes():
     
  
     
-    print(f'{ba}      ━━━━━━━━❮◆❯━━━━━━━━━━{ba}\n        {cia}MILICIA PIKA DE MEL{ba}\n    {ba}  ━━━━━━━━❮◆❯━━━━━━━━━━{ba}\n  CRIADO POR: {ro}SWAG,MRDINIZ,SPYWARE{ba}\n  GITHUB: Swag666baby {cia}//{ba} mrdiniz88 {cia}//{ba} Spyware0 \n  ZAP: 556295598220\n\n  ESCOLHA UM NÚMERO: \n\n\n  {ba}━❮{cia}1{ba}❯━{cia} CONSULTA DE CEP\n  {ba}━❮{cia}2{ba}❯━{cia} CONSULTA DE IP\n  {ba}━❮{cia}3{ba}❯━{cia} CONSULTA DE CNPJ\n  {ba}━❮{cia}4{ba}❯━{cia} CONSULTA DE PLACA\n  {ba}━❮{cia}5{ba}❯━{cia} CONSULTA DE TELEFONE\n  {ba}━❮{cia}6{ba}❯━{cia} CONSULTA DE CPF\n  {ba}━❮{cia}7{ba}❯━{cia} CONSULTA DE NOME\n\n  {ba}━❮{cia}0{ba}❯━{v} EXIT{ba}')
+    print(f'''      {ba}━━━━━━━━❮◆❯━━━━━━━━━━{ba}
+        {cia}MILICIA PIKA DE MEL{ba}
+    {ba}  ━━━━━━━━❮◆❯━━━━━━━━━━{ba}
+  CRIADO POR: {ro}SWAG,SPYWARE,DINIZ{ba}
+  GITHUB: Swag666baby {cia}//{ba} Spyware0 {cia}//{ba} mrdiniz88
     
-    opc = input(f'{cia}   ➣➣➣    {ba}')
+  ESCOLHA UM NÚMERO: 
+    
+
+  {ba}━❮{cia}1{ba}❯━{cia} CONSULTA DE CEP
+  {ba}━❮{cia}2{ba}❯━{cia} CONSULTA DE IP
+  {ba}━❮{cia}3{ba}❯━{cia} CONSULTA DE CNPJ
+  {ba}━❮{cia}4{ba}❯━{cia} CONSULTA DE PLACA
+  {ba}━❮{cia}5{ba}❯━{cia} CONSULTA DE TELEFONE
+  {ba}━❮{cia}6{ba}❯━{cia} CONSULTA DE CPF
+  {ba}━❮{cia}7{ba}❯━{cia} CONSULTA DE NOME''')
+    
+    opc = input(f'   ➣➣➣    {ba}')
     
 
     if opc == '1':
@@ -51,8 +66,6 @@ def opcoes():
     	
     elif opc == '7':
     	nome()
-    elif opc == '0':
-    	print('')
     	
     else:
         restart()
@@ -127,17 +140,33 @@ def Cnpj():
 def placa():
     clear()
     placa = input(f'{cia}DIGITE A PLACA{ba}: ')
+	
     u = requests.get(f'https://apicarros.com/v1/consulta/{placa}/json', verify=False)
+	
     pj = u.json()
+    
     clear()
-    for i in pj:
-    	print(f'{cia}{i}{ba}: {pj[i]}')
-    Enter() 
+
+    print(f'{cia}ANO{ba}: {pj["ano"]}')
+    print(f'{cia}ANO MODELO{ba}: {pj["anoModelo"]}')
+    print(f'{cia}COR{ba}: {pj["cor"]}')
+    print(f'{cia}CHASSI{ba}: {pj["chassi"]}')
+    print(f'{cia}CODIGO DE RETORNO{ba}: {pj["codigoRetorno"]}')
+    print(f'{cia}CODIGO DE SITUACAO{ba}: {pj["codigoSituacao"]}')
+    print(f'{cia}DATA{ba}: {pj["data"]}')
+    print(f'{cia}DATA FURTO{ba}: {pj["dataAtualizacaoRouboFurto"]}')
+    print(f'{cia}MARCA{ba}: {pj["marca"]}')
+    print(f'{cia}MODELO{ba}: {pj["modelo"]}')
+    print(f'{cia}LOCALIDADE{ba}: {pj["uf"]}')
+    print(f'{cia}PLACA{ba}: {pj["placa"]}')
+    print(f'{cia}SITUACAO{ba}: {pj["situacao"]}')
+    print(f'{cia}MUNICIPIO{ba}: {pj["municipio"]}')
+    print(f'{cia}RETORNO{ba}: {pj["mensagemRetorno"]}')
+    Enter()
     
 def telefone():
 	clear()
 	print(f'{v}OPÇÃO DESABILITADA{ba}')
-	clear()
 	Enter()
 	
 def cpf():
@@ -147,23 +176,7 @@ def cpf():
 	
 def nome():
 	clear()
-	nome = input(f'{cia}DIGITE O NOME{ba}: ')
-	nom = requests.get(f'http://ghostcenter.xyz/api/nome/{nome}')
-	bb = nom.json()
-	for i in bb:
-		if bb[i] != '':
-			if type(bb[i]) == dict:
-				
-				for c in [i]:
-					print(f'{cia}{c}{ba}: {bb[i][c]}')
-			elif type(bb[i]) == list:
-				
-				for ite in bb[i]:
-					for ij in ite:
-						print(f'{cia}{ij}{ba}: {ite[ij]}')
-			elif type(bb[i]) == str or int or float or bool:
-				print(f'{cia}{i}{ba}: {bb[i]}')
-	
+	print(f'{v}OPÇÃO DESABILITADA{ba}')
 	Enter()
 
 clear()
