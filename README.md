@@ -6,23 +6,23 @@
 
 # ***Painel mpm***
 
-Um painel simples com consultas de **IP**, **CNPJ**, **CEP**, **PLACA**, **TELEFONE**, **CPF** e **NOME**
+A simple panel with consultations of **IP**, **CNPJ**, **CEP**, **LICENSE PLATE**, **TELEPHONE**, **CPF** and **NAME** 
 
-## Início🌐
+## Start 🌐
 ```shell script
 apt update && apt upgrade -y
 pkg i python git
 pip install requests
 ```
 
-## Instalação e acesso📲
+## installation and access 📲
 ```shell script
 git clone https://github.com/Swag666baby/Painel-mpm
 cd painel-mpm
 python3 painel-mpm.py
 ```
 
-## Lindos que contribuiram para o painel❤️
+## Gorgeous who contributed to the panel ❤️
 
 [Spyware](https://github.com/Spyware0)
 
