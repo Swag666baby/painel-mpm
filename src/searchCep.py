@@ -1,18 +1,18 @@
-def Cep(clear, requests, cia, ba, Enter):
+def Cep(clear, requests, cian, ba, restartCode):
     clear()
-    cep = input(f'{cia}DIGITE O CEP{ba}: ')
+    cep = input(f'{cian}DIGITE O CEP{white}: ')
     data = requests.get(f'https://viacep.com.br/ws/{cep}/json').json()
     clear()
     print(f'''
-{cia}CEP{ba}: {data["cep"]}
-{cia}LOGRADOURO{ba}: {data["logradouro"]}
-{cia}COMPLEMENTO{ba}: {data["complemento"]}
-{cia}BAIRRO{ba}: {data["bairro"]}
-{cia}LOCALIDADE{ba}: {data["localidade"]}
-{cia}UF{ba}: {data["uf"]}
-{cia}IBGE{ba}: {data["ibge"]}
-{cia}GIA{ba}: {data["gia"]}
-{cia}DDD{ba}: {data["ddd"]}
-{cia}SIAF{ba}: {data["siafi"]}
+{cian}CEP{white}: {data["cep"]}
+{cian}LOGRADOURO{white}: {data["logradouro"]}
+{cian}COMPLEMENTO{white}: {data["complemento"]}
+{cian}BAIRRO{white}: {data["bairro"]}
+{cian}LOCALIDADE{white}: {data["localidade"]}
+{cian}UF{white}: {data["uf"]}
+{cian}IBGE{white}: {data["ibge"]}
+{cian}GIA{white}: {data["gia"]}
+{cian}DDD{white}: {data["ddd"]}
+{cian}SIAF{white}: {data["siafi"]}
 ''')
-    Enter()
+    restartCode()

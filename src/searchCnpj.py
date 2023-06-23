@@ -1,22 +1,22 @@
-def Cnpj(clear, requests, cia, ba, Enter):
+def Cnpj(clear, requests, cian, ba, restartCode):
     clear()
-    cnpj = input(f'{cia}DIGITE O CNPJ{ba}: ')
+    cnpj = input(f'{cian}DIGITE O CNPJ{white}: ')
     data = requests.get(f'https://www.receitaws.com.br/v1/cnpj/{cnpj}').json()
     clear()
     print(f'''
-{cia}NOME{ba}: {data["nome"]}
-{cia}COMPLEMENTO{ba} : {data["complemento"]}
-{cia}ATUALIZACAO CADASTRAL{ba}: {data["data_situacao"]}
-{cia}TIPO{ba}: {data["tipo"]}
-{cia}TELEFONE{ba}: {data["telefone"]}
-{cia}EMAIL{ba}: {data["email"]}
-{cia}SITUACAO{ba}: {data["situacao"]}
-{cia}BAIRRO{ba}: {data["bairro"]}
-{cia}NUMERO{ba}: {data["numero"]}
-{cia}CEP{ba}: {data["cep"]}
-{cia}MUNICIPIO{ba}: {data["municipio"]}
-{cia}DATA DE ABERTURA{ba}: {data["abertura"]}
-{cia}CNPJ{ba}: {data["cnpj"]}
-{cia}CAPITAL SOCIAL{ba}: {data["capital_social"]}
+{cian}NOME{white}: {data["nome"]}
+{cian}COMPLEMENTO{white} : {data["complemento"]}
+{cian}ATUALIZACAO CADASTRAL{white}: {data["data_situacao"]}
+{cian}TIPO{white}: {data["tipo"]}
+{cian}TELEFONE{white}: {data["telefone"]}
+{cian}EMAIL{white}: {data["email"]}
+{cian}SITUACAO{white}: {data["situacao"]}
+{cian}BAIRRO{white}: {data["bairro"]}
+{cian}NUMERO{white}: {data["numero"]}
+{cian}CEP{white}: {data["cep"]}
+{cian}MUNICIPIO{white}: {data["municipio"]}
+{cian}DATA DE ABERTURA{white}: {data["abertura"]}
+{cian}CNPJ{white}: {data["cnpj"]}
+{cian}CAPITAL SOcianL{white}: {data["capital_socianl"]}
 ''')
-    Enter()
+    restartCode()

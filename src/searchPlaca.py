@@ -1,23 +1,23 @@
-def Placa(clear, requests, cia, ba, Enter):
+def Placa(clear, requests, cian, ba, restartCode):
     clear()
-    placa = input(f'{cia}DIGITE A PLACA{ba}: ')
+    placa = input(f'{cian}DIGITE A PLACA{white}: ')
     data = requests.get(f'https://apicarros.com/v1/consulta/{placa}/json', verify=False).json()
     clear()
     print(f'''
-{cia}ANO{ba}: {data["ano"]}
-{cia}ANO MODELO{ba}: {data["anoModelo"]}
-{cia}COR{ba}: {data["cor"]}
-{cia}CHASSI{ba}: {data["chassi"]}
-{cia}CODIGO DE RETORNO{ba}: {data["codigoRetorno"]}
-{cia}CODIGO DE SITUACAO{ba}: {data["codigoSituacao"]}
-{cia}DATA{ba}: {data["data"]}
-{cia}DATA FURTO{ba}: {data["dataAtualizacaoRouboFurto"]}
-{cia}MARCA{ba}: {data["marca"]}
-{cia}MODELO{ba}: {data["modelo"]}
-{cia}LOCALIDADE{ba}: {data["uf"]}
-{cia}PLACA{ba}: {data["placa"]}
-{cia}SITUACAO{ba}: {data["situacao"]}
-{cia}MUNICIPIO{ba}: {data["municipio"]}
-{cia}RETORNO{ba}: {data["mensagemRetorno"]}
+{cian}ANO{white}: {data["ano"]}
+{cian}ANO MODELO{white}: {data["anoModelo"]}
+{cian}COR{white}: {data["cor"]}
+{cian}CHASSI{white}: {data["chassi"]}
+{cian}CODIGO DE RETORNO{white}: {data["codigoRetorno"]}
+{cian}CODIGO DE SITUACAO{white}: {data["codigoSituacao"]}
+{cian}DATA{white}: {data["data"]}
+{cian}DATA FURTO{white}: {data["dataAtualizacaoRouboFurto"]}
+{cian}MARCA{white}: {data["marca"]}
+{cian}MODELO{white}: {data["modelo"]}
+{cian}LOCALIDADE{white}: {data["uf"]}
+{cian}PLACA{white}: {data["placa"]}
+{cian}SITUACAO{white}: {data["situacao"]}
+{cian}MUNICIPIO{white}: {data["municipio"]}
+{cian}RETORNO{white}: {data["mensagemRetorno"]}
 ''')
-    Enter()
+    restartCode()

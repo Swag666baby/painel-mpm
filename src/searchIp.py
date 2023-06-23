@@ -1,17 +1,17 @@
-def Ip(clear, requests, cia, ba, Enter):
+def Ip(clear, requests, cian, ba, restartCode):
     clear()
-    ip = input(f'{cia}DIGITE O IP{ba}: ')
+    ip = input(f'{cian}DIGITE O IP{white}: ')
     data = requests.get(f'https://ipwhois.app/json/{ip}').json()
     clear()
     print(f'''
-{cia}IP{ba}: {data["ip"]}
-{cia}CONTINENTE{ba}: {data ["continent"]}
-{cia}PAIS{ba}: {data ["country"]}
-{cia}CAPITAL{ba}: {data ["country_capital"]}
-{cia}CODIGO DE AREA{ba}: {data ["country_phone"]}
-{cia}ESTADO{ba}: {data ["region"]}
-{cia}LATITUDE{ba}: {data ["latitude"]}
-{cia}LONGITUDEDE{ba}: {data ["longitude"]}
-{cia}PROVEDOR{ba}: {data ["asn"]}
+{cian}IP{white}: {data["ip"]}
+{cian}CONTINENTE{white}: {data ["continent"]}
+{cian}PAIS{white}: {data ["country"]}
+{cian}CAPITAL{white}: {data ["country_capital"]}
+{cian}CODIGO DE AREA{white}: {data ["country_phone"]}
+{cian}ESTADO{white}: {data ["region"]}
+{cian}LATITUDE{white}: {data ["latitude"]}
+{cian}LONGITUDEDE{white}: {data ["longitude"]}
+{cian}PROVEDOR{white}: {data ["asn"]}
 ''')
-    Enter()
+    restartCode()
