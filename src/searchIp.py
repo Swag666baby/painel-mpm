@@ -1,4 +1,4 @@
-def Ip(clear, requests, cian, ba, restartCode):
+def Ip(clear, requests, cian, white, restartCode):
     clear()
     ip = input(f'{cian}DIGITE O IP{white}: ')
     data = requests.get(f'https://ipwhois.app/json/{ip}').json()
