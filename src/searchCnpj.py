@@ -1,4 +1,4 @@
-def Cnpj(clear, requests, cian, ba, restartCode):
+def Cnpj(clear, requests, cian, white, restartCode):
     clear()
     cnpj = input(f'{cian}DIGITE O CNPJ{white}: ')
     data = requests.get(f'https://www.receitaws.com.br/v1/cnpj/{cnpj}').json()
