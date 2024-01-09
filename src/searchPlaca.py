@@ -1,4 +1,4 @@
-def Placa(clear, requests, cian, ba, restartCode):
+def Placa(clear, requests, cian, white, restartCode):
     clear()
     placa = input(f'{cian}DIGITE A PLACA{white}: ')
     data = requests.get(f'https://apicarros.com/v1/consulta/{placa}/json', verify=False).json()
