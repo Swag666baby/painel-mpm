@@ -1,4 +1,4 @@
-def Cep(clear, requests, cian, ba, restartCode):
+def Cep(clear, requests, cian, white, restartCode):
     clear()
     cep = input(f'{cian}DIGITE O CEP{white}: ')
     data = requests.get(f'https://viacep.com.br/ws/{cep}/json').json()
